@@ -16,3 +16,11 @@ Based on the [Cordova Command Line Interface](http://cordova.apache.org/docs/en/
 Based on the [Cordova Command Line Interface](http://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
 
 1. Within `tictactoe` directory: `../node_modules/.bin/cordova build`
+
+## Testing on a local Android device
+
+Make sure that you can run/debug Android devices through e.g. the Eclipse ADT, by setting USB debugging mode to "on" etc.
+
+Based on the [Cordova Command Line Interface](http://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
+
+1. Within `tictactoe` directory: `../node_modules/.bin/cordova run android`
