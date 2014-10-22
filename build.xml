@@ -3,7 +3,7 @@
 	xmlns:artifact="urn:maven-artifact-ant">
 
     <target name="run"
-        	depends="clean,grunt-build"
+        	depends="clean,prepare,grunt-build"
         	description="Build and run the Android Cordova app on a connected Android device.">
         
         <exec dir="." executable="node_modules/.bin/cordova">
@@ -13,7 +13,7 @@
     </target>
    	
     <target name="build"
-        	depends="clean,grunt-build"
+        	depends="clean,prepare,grunt-build"
         	description="Build the Android Cordova app.">
         
         <exec dir="." executable="node_modules/.bin/cordova">
@@ -28,11 +28,22 @@
     </target>
     
     <target name="clean">
-		<delete includeemptydirs="true">
+		<delete includeemptydirs="true" failonerror="false">
 		    <fileset dir="www">
 		        <exclude name=".gitignore" />
 		    </fileset>
 		</delete>
+		<delete includeemptydirs="true" failonerror="false">
+		    <fileset dir="platforms/android/assets/www">
+		        <exclude name=".gitignore" />
+		    </fileset>
+		</delete>
+		</target>
+    
+    <target name="prepare">
+        <mkdir dir="platforms/android/assets/www/css" />
+        <mkdir dir="platforms/android/assets/www/js" />
+        <mkdir dir="platforms/android/assets/www/img" />
     </target>
 	
 </project>
