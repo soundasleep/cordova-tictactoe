@@ -5,9 +5,13 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,300italic,700,700italic' rel='stylesheet' type='text/css'>
 
-	<script src="scripts/components.js"></script>
+	<!-- build:js scripts/components.js -->
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+	<!-- endbuild -->
 
-	<script src="scripts/scripts.js"></script>
+	<!-- build:js scripts/scripts.js -->
+	<script type="text/javascript" src="js/application.js"></script>
+	<!-- endbuild -->
 </head>
 <body>
 
@@ -35,7 +39,7 @@
 
 <p class="github">Contribute at <a href="https://github.com/soundasleep/jstictactoe">jstictactoe</a></p>
 
-<p class="build-date">Built <span>Wed Oct 22 2014 14:28:22 GMT+1300 (NZDT)</span></p>
+<p class="build-date">Built <span>@@build_date</span></p>
 
 </body>
 </html>

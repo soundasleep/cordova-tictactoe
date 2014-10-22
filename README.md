@@ -11,11 +11,25 @@ Based on the [Cordova Command Line Interface](http://cordova.apache.org/docs/en/
 1. `node_modules/.bin/cordova platform add android`
 1. Check in all files: _"it is mostly build product but some things like the AndroidManifest.xml you will end up tweaking manually"_
 
-## Building
+## Building the web app
+
+Internally we use the [jstictactoe](https://github.com/soundasleep/jstictactoe) web application imported directly into this project.
+
+```
+cd www
+npm install
+gem install sass
+grunt build
+
+```
+
+## Building the Android app
 
 Based on the [Cordova Command Line Interface](http://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
 
-1. `node_modules/.bin/cordova build`
+```
+node_modules/.bin/cordova build
+```
 
 ## Testing on a local Android device
 
@@ -23,4 +37,6 @@ Make sure that you can run/debug Android devices through e.g. the Eclipse ADT, b
 
 Based on the [Cordova Command Line Interface](http://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
 
-1. `node_modules/.bin/cordova run android`
+```
+node_modules/.bin/cordova run android
+```
