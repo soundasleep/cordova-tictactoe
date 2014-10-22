@@ -1,3 +1,7 @@
+# cordova-tictactoe
+
+A simple application that uses the [Apache Cordova project](http://cordova.apache.org/) to wrap [a Javascript TicTacToe game](https://github.com/soundasleep/jstictactoe) as a native Android app.
+
 ## Installing
 
 1. Install a JDK and required build tools: `sudo apt-get install openjdk-7-jdk ant` 
