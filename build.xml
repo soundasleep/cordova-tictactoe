@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<project name="HubNet Install" default="integrate" basedir="."
+	xmlns:artifact="urn:maven-artifact-ant">
+
+    <target name="run"
+        	depends="clean,grunt-build"
+        	description="Build and run the Android Cordova app on a connected Android device.">
+        
+        <exec dir="." executable="node_modules/.bin/cordova">
+            <arg value="run" />
+            <arg value="android" />
+        </exec>
+    </target>
+   	
+    <target name="build"
+        	depends="clean,grunt-build"
+        	description="Build the Android Cordova app.">
+        
+        <exec dir="." executable="node_modules/.bin/cordova">
+            <arg value="build" />
+        </exec>
+    </target>
+   	
+    <target name="grunt-build">
+        <exec dir="wwwsrc/" executable="grunt">
+            <arg value="build" />
+        </exec>
+    </target>
+    
+    <target name="clean">
+		<delete includeemptydirs="true">
+		    <fileset dir="www">
+		        <exclude name=".gitignore" />
+		    </fileset>
+		</delete>
+    </target>
+	
+</project>

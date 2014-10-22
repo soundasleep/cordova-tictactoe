@@ -10,7 +10,7 @@ module.exports = (grunt) ->
     clean:
       dist: ['dist']
       distNodeModulesJs: ['dist/node_modules']
-      www: ['../www']
+      www: ['../www', '!../www/.gitignore']
       options:
         # This overrides this task from blocking deletion of folders outside current working dir (CWD). Use with caution.
       	force: true
